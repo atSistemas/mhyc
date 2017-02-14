@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "mhyc.js",
   "description": "Mobile Hybreed Core library tools to develop better hybrid mobile applications",
-  "private": true,
   "author": "atSistemas",
   "license": "MIT",
   "keywords": [
