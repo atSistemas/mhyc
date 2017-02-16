@@ -28,7 +28,6 @@
         MhyC.log('[MhyC] Init');
         MhyC.log('[MhyC] Version ' + MhyC.version);
         MhyC.log('[MhyC] PixelRatio: ' + window.devicePixelRatio + ' (' + window.screen.width + 'x' + window.screen.height + ')');
-        MhyC.getPlatform();
 
         $.support.cors = true;
         $.ajaxSetup({
