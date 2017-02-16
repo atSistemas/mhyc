@@ -34,7 +34,7 @@
             cache: true,
             timeout: 20000
         });
-
+        
         // JQuery Configuration : Ajax Errors
         $(document).ajaxError(function (event, request, settings) {
             return console.log(request.status + ' ' + request.statusText + ' ' + request.responseText + '\n' + settings.url);
@@ -87,7 +87,7 @@
 
         MhyC.log('[MhyC] Connection type: ' + states[networkState]);
 
-        MhyC.online = !Connection.NONE && navigator.onLine;
+        MhyC.online = networkState != Connection.NONE && navigator.onLine;
 
     };
 
@@ -202,11 +202,6 @@
 
     MhyC.isAndroid = function() {
         return MhyC.mobile && _.isEqual(MhyC.platform, 'android');
-    };
-
-    MhyC.isAndroid2 = function() {
-        return MhyC.mobile && _.isEqual(MhyC.platform, 'android') &&
-            MhyC.platformVersion.indexOf('2.') === 0;
     };
 
     MhyC.start = function(debug) {
